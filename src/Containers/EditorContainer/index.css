@@ -1,0 +1,9 @@
+.editorWindow {
+    width : 1000px;
+    border : 1px solid black;
+    border-radius: 10px;
+}
+
+.editor {
+    padding: 0 40px;
+}
