@@ -6,11 +6,10 @@ import { EditorState, Modifier, AtomicBlockUtils, } from 'draft-js';
 function CustomDropdownContainer({...props}) {
 
     function onChangeSelect(item) {
-        console.log(item);
         const { editorState, onChange } = props;
         const contentState = editorState.getCurrentContent();
         const contentStateWithEntity = contentState.createEntity(
-            'TOKEN',
+            'CustomChip',
             'IMMUTABLE',
             {data: {...item}},
         );
@@ -19,7 +18,7 @@ function CustomDropdownContainer({...props}) {
             editorState,
             {currentContent: contentStateWithEntity},
         );
-        onChange(AtomicBlockUtils.insertAtomicBlock(newEditorState, entityKey, ' '))
+        onChange(AtomicBlockUtils.insertAtomicBlock(newEditorState, entityKey, 'CustomChip'))
     }
 
     return (

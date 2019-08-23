@@ -1,0 +1,25 @@
+.chips{
+    margin : 0 10px;
+    display : flex;
+    align-items: center;
+    height : 50px;
+    padding : 0 40px 0 10px;
+    background-color: lightblue;
+    color : black;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.chips__close-area{
+    position: absolute;
+    top : 0;
+    bottom: 0;
+    width : 30px;
+    right : 0;
+    display : flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 10px 10px 0;
+    border-left : 1px solid black;
+}

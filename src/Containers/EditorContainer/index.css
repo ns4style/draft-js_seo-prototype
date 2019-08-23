@@ -7,3 +7,15 @@
 .editor {
     padding: 0 40px;
 }
+
+.inlineFlex {
+    display: inline-flex;
+}
+
+.atomic {
+    display: inline-flex;
+}
+
+.atomic + .unstyled {
+    display: inline-flex;
+}
