@@ -10,15 +10,16 @@ const customStyles = {
     })
 }
 
-function CustomDropdown({selectOptions, onChange}) {
+function CustomDropdown({selectOptions, onChange, placeholder, value}) {
     return (
         <div className={'selectWrapper'}>
             <Select
-                value={null}
+                value={!!value ? value : null}
                 options={selectOptions}
                 onChange={onChange}
-                placeholder={'Вставить сеотэг'}
+                placeholder={placeholder}
                 styles={customStyles}
+                isClearable={true}
             />
         </div>
 

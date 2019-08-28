@@ -1,12 +1,13 @@
 import React from 'react';
-import CustomChip from '../../Components/CustomChip';
+import CustomChipContainer from '../CustomChipContainer';
 
 
 const blockRenderFn = (block, ES, onChangeES) => {
     if (block.getType() === 'atomic') {
         return {
-            component: ({...props}) => <CustomChip {...props} ES={ES} onChangeES={onChangeES}/>,
+            component: ({...props}) => <CustomChipContainer {...props} ES={ES} onChangeES={onChangeES}/>,
             editable: false,
+            readOnly : true
         };
     }
     return null;
